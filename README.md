@@ -27,3 +27,30 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   CPU: (8) @ 1.800GHz
             .-/+oossssoo+/-.
 ```
 Ignore GPU section lol
+
+## eMMC
+```
+/dev/mmcblk0:
+ Timing O_DIRECT disk reads: 688 MB in  3.01 seconds = 228.92 MB/sec
+andrew@andrew-desktop:~$ sudo hdparm -t --direct /dev/mmcblk0
+
+/dev/mmcblk0:
+ Timing O_DIRECT disk reads: 716 MB in  3.00 seconds = 238.35 MB/sec
+andrew@andrew-desktop:~$
+```
+
+## NVMe Disk
+```
+andrew@andrew-desktop:~$ sudo hdparm -t --direct /dev/nvme0n1
+
+/dev/nvme0n1:
+ Timing O_DIRECT disk reads: 5348 MB in  3.00 seconds = 1782.51 MB/sec
+andrew@andrew-desktop:~$ sudo hdparm -t --direct /dev/nvme0n1
+
+/dev/nvme0n1:
+ Timing O_DIRECT disk reads: 5538 MB in  3.00 seconds = 1845.76 MB/sec
+andrew@andrew-desktop:~$ sudo hdparm -t --direct /dev/nvme0n1
+
+/dev/nvme0n1:
+ Timing O_DIRECT disk reads: 5512 MB in  3.00 seconds = 1836.86 MB/sec
+```
